@@ -24,15 +24,29 @@ angular.module('myApp.controllers', [])
             {"label": "Series4", "data": 89},
             {"label": "Series5", "data": 85}
         ];
-        $scope.canvasData = [
+
+//        $scope.floatData = [
+//            {"label": "Global", "data": 44},
+//            {"label": "Domestic", "data": 51},
+//        ];
+        /*$scope.canvasData = [
             {  y: 6, legendText:"Google", label1: "83.3%" },
             {  y: 8, legendText:"Yahoo!", label1: "8.16%" },
             {  y: 9, legendText:"Bing", labe1: "4.67%" },
             {  y: 4, legendText:"Baidu" , label1: "1.67%"},
             {  y: 5, legendText:"Baidu11" , label1: "1.67%"}
 
-        ];
+        ];*/
 
+        $scope.canvasData = [
+            {  y: 6, legendText:"Domestic", label1: "(Domestic)83.3%" },
+            {  y: 8, legendText:"Global", label1: "(Global)8.16%" }
+
+        ];
+        $scope.floatOnSeriesClick=function(){
+            debugger;
+
+        }
 
     }])
     .controller('EmployeeListCtrl', ['$scope', 'Employee', function ($scope, Employee) {

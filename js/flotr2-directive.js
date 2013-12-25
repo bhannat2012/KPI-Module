@@ -78,7 +78,7 @@ angular.module('flotr2D', [])
     });*/
 /*
 angular.module('fChartModule', [])*/
-    .directive('flotr2Chart', function () {
+    .directive('flotrrChart', function () {
         return {
             restrict: 'A',
             link: function (scope, elem, attrs) {

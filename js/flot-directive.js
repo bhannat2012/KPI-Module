@@ -4,18 +4,24 @@ angular.module('flotD', [])
     .directive('flotChart', function () {
         return {
             restrict: 'A',
-            link: function (scope, elem, attrs) {
+//            scope:{
+//                floatData:'=',
+//                floatOnSeriesClick :'='
+//            },
+            link: function (scope, charDiv, attrs) {
                 debugger;
 
                 var chart = null,
                     opts = { };
 
                 var data = scope[attrs.ngModel];
-
+                var onSeriesClicFn = scope[attrs.floatOnSeriesClick];
                 scope.$watch('floatData', function (v) {
                    // chart = $.plot(elem, v , options);
+                    charDiv.unbind();
                     debugger;
-                          $.plot(elem, v, {
+                          $.plot(charDiv, v, {
+
                             series: {
                                 pie: {
                                     show: true,
@@ -42,6 +48,32 @@ angular.module('flotD', [])
                                 clickable: true
                             }
                         });
+
+                    jQuery(charDiv.id).bind("plotclick", function(event, pos, obj) {
+                        debugger;
+                    });
+                    charDiv.bind("plotclick", function(event, pos, obj) {
+                        debugger;
+                    });
+                    charDiv.bind("click", function(event, pos, obj) {
+                        debugger;
+                    });
+                    charDiv.bind("plotclick", function(event, pos, obj) {
+
+//                        if (!obj) {
+//                            return;
+//                        }
+//
+//                        percent = parseFloat(obj.series.percent).toFixed(2);
+//                        alert(""  + obj.series.label + ": " + percent + "%");
+                        debugger;
+                      if( onSeriesClicFn && ( typeof onSeriesClicFn ==='function')){
+                          console.log('found @ floatOnSeriesClick');
+                          debugger;
+                          onSeriesClicFn(obj.series);
+                      }
+                     //
+                    });
                 });
             }
         }
