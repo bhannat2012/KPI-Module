@@ -1,7 +1,6 @@
-
 <div class="topcoat-navigation-bar">
     <div class="topcoat-navigation-bar__item quarter left">
-        <a href="#"  class="topcoat-icon-button--quiet js-menu-button">
+        <a href="#" class="topcoat-icon-button--quiet js-menu-button">
             <span class="topcoat-icon topcoat-icon--menu-stack"></span></a>
     </div>
     <div class="topcoat-navigation-bar__item half full">
@@ -23,26 +22,28 @@
 <!--</snap-content>-->
 <div class="topcoat-list__container scroller" style="top:69px;">
     <div ng-controller="ChartCtrl">
-
-    <!--<div   style="height: 300px; width: 300px;"-->
-           <!--flot-chart="" ng-model="floatData"-->
-           <!--float-on-series-click ="floatOnSeriesClick" >-->
-    <!--</div>-->
+        <!--<div   style="height: 300px; width: 300px;"-->
+        <!--flot-chart="" ng-model="floatData"-->
+        <!--float-on-series-click ="floatOnSeriesClick" >-->
+        <!--</div>-->
 
         <!--<div   style="height: 300px; width: 300px;" flotrr-chart="" ng-model="floatData"> </div>-->
-    <!--<div id="chartContainer" style="height: 300px; width: 300px;" canvas-chart="" ng-model="canvasData"> </div>-->
-    <!--<div id="chartContainer" style="height: 300px; width: 300px;" flot-chart="" ng-model="canvasData"> </div>-->
+        <!--<div id="chartContainer" style="height: 300px; width: 300px;" canvas-chart="" ng-model="canvasData"> </div>-->
+        <!--<div id="chartContainer" style="height: 300px; width: 300px;" flot-chart="" ng-model="canvasData"> </div>-->
         <p></p>
-        <flot-chart ng-model="floatData"  style="height: 300px; width: 300px;" float-on-series-click ="floatOnSeriesClick" > </flot-chart>
+        <flot-chart ng-model="floatData" style="height: 300px; width: 300px;"
+                    float-on-series-click="floatOnSeriesClick"></flot-chart>
 
         <p></p>
-        <dl class="example-animate-container">
-              <div   ng-repeat-start="data in floatData" ></div>
-                <dt  >
+
+        <dl class="topcoat-list__container ">
+            <div ng-repeat-start="data in floatData"></div>
+            <dt class="topcoat-list list actions">
                 [{{$index + 1}}] {{data.label}}
-                </dt>
-                <dd>{{data.data}}</dd>
-                <div ng-repeat-end></div>
+            </dt>
+            <dd class="topcoat-list__item">{{data.data}}</dd>
+            <div ng-repeat-end></div>
         </dl>
     </div>
+
 </div>

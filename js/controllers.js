@@ -21,7 +21,7 @@ angular.module('myApp.controllers', [])    .
         init();
 
         $scope.data = [[[0, 1], [1, 5], [2, 2]]];
-        $scope.floatData = [];
+        $scope.floatData = null;
         /*[
             {"label": "Series1", "data": 44,clickable: true,more:'more-data1'},
             {"label": "Series2", "data": 51,clickable: true,more:'more-data2'},

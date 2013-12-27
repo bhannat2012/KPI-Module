@@ -59,6 +59,7 @@ angular.module('flotD', [])
                    // chart = $.plot(elem, v , options);
                     jQuery(charDiv).unbind();
                    // debugger;
+                    if(!v) return;
                     if(!chart){
                       chart =  $.plot(charDiv, v, options);
                         debugger;
