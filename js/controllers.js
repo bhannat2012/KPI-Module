@@ -39,15 +39,15 @@ angular.module('myApp.controllers', [])    .
         $scope.floatOnSeriesClick=function(flot){
             debugger;
            // alert(flot.series);
-/*
+
             console.log(JSON.stringify(flot.series));
 
             var seriesJSON = $scope.floatData[flot.seriesIndex].nextUrl;
             var url=  server + '/'+seriesJSON+'.json';
             loadData(url);
-*/
 
-            $location.path(  server +  '/employees' )
+
+          //  $location.path(  server +  '/employees' )
 
         };
 

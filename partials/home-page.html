@@ -32,7 +32,17 @@
         <!--<div   style="height: 300px; width: 300px;" flotrr-chart="" ng-model="floatData"> </div>-->
     <!--<div id="chartContainer" style="height: 300px; width: 300px;" canvas-chart="" ng-model="canvasData"> </div>-->
     <!--<div id="chartContainer" style="height: 300px; width: 300px;" flot-chart="" ng-model="canvasData"> </div>-->
-
+        <p></p>
         <flot-chart ng-model="floatData"  style="height: 300px; width: 300px;" float-on-series-click ="floatOnSeriesClick" > </flot-chart>
+
+        <p></p>
+        <dl class="example-animate-container">
+              <div   ng-repeat-start="data in floatData" ></div>
+                <dt  >
+                [{{$index + 1}}] {{data.label}}
+                </dt>
+                <dd>{{data.data}}</dd>
+                <div ng-repeat-end></div>
+        </dl>
     </div>
 </div>
