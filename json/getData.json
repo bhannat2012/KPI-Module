@@ -1,0 +1,5 @@
+[
+    {"label": "Domestic", "data": 10,"lvl":0,"nextUrl":"states","name":"domestic"}
+   , {"label": "Overcies", "data": 20,"lvl":1,"nextUrl":"states","name":"domestic"}
+
+]
