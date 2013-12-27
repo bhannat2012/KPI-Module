@@ -23,13 +23,16 @@
 <!--</snap-content>-->
 <div class="topcoat-list__container scroller" style="top:69px;">
     <div ng-controller="ChartCtrl">
-    <div   style="height: 300px; width: 300px;"
-           flot-chart="" ng-model="floatData"
-           float-on-series-click ="floatOnSeriesClick" >
-    </div>
-    <!--<div   style="height: 300px; width: 300px;" flotrr-chart="" ng-model="floatData"> </div>-->
+
+    <!--<div   style="height: 300px; width: 300px;"-->
+           <!--flot-chart="" ng-model="floatData"-->
+           <!--float-on-series-click ="floatOnSeriesClick" >-->
+    <!--</div>-->
+
+        <!--<div   style="height: 300px; width: 300px;" flotrr-chart="" ng-model="floatData"> </div>-->
     <!--<div id="chartContainer" style="height: 300px; width: 300px;" canvas-chart="" ng-model="canvasData"> </div>-->
     <!--<div id="chartContainer" style="height: 300px; width: 300px;" flot-chart="" ng-model="canvasData"> </div>-->
 
+        <flot-chart ng-model="floatData"  style="height: 300px; width: 300px;" float-on-series-click ="floatOnSeriesClick" > </flot-chart>
     </div>
 </div>

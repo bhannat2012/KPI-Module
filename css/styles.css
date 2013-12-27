@@ -249,3 +249,8 @@ ul {
     transform: translateX(100%);
 }
 
+flot-chart {
+    /*display:none;*/
+    width:300px;
+    height:200px;
+}
