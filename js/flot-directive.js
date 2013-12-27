@@ -44,7 +44,7 @@ angular.module('flotD', [])
                         show: false
                     },
                     grid: {
-                        hoverable: true,
+                       // hoverable: true,
                         clickable: true
                     },zoom: {
                         interactive: true
@@ -60,15 +60,16 @@ angular.module('flotD', [])
                     jQuery(charDiv).unbind();
                    // debugger;
                     if(!v) return;
-                    if(!chart){
-                      chart =  $.plot(charDiv, v, options);
-                        debugger;
-                      //if(charDiv.show)  charDiv.show();
-                    }else{
-                        chart.setData(v);
-                        chart.setupGrid();
-                        chart.draw();
-                    }
+                    chart =  $.plot(charDiv, v, options);
+//                    if(!chart){
+//                      chart =  $.plot(charDiv, v, options);
+//                        debugger;
+//                      //if(charDiv.show)  charDiv.show();
+//                    }else{
+//                        chart.setData(v);
+//                        chart.setupGrid();
+//                        chart.draw();
+//                    }
 
 
                     jQuery(charDiv).bind("plotclick", function(event, pos, flotObject) {
